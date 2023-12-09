@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cuentas Bancarias</title>
+</head>
+<body>
+    <h2>Lista de Cuentas Bancarias</h2>
+    <ul>
+        {% for cuenta in cuentas %}
+            <li>{{ cuenta.numero_cuenta }} - Saldo: {{ cuenta.saldo }}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{% url 'crear_cuenta' %}">Crear Cuenta Bancaria</a>
+</body>
+</html>
